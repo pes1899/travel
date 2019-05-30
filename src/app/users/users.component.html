@@ -1,0 +1,22 @@
+<h2>Users</h2>
+<button type="button" class="btn btn-primary" (click)=add()>Add</button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Value</th>
+      <th>Login</th>
+      <th>Valid from</th>
+      <th>Valid to</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.value}}</td>
+      <td><a routerLink="/user/{{user.id}}">{{user.login}}</a></td>
+      <td>{{user.validFrom}}</td>
+      <td>{{user.validTill}}</td>
+    </tr>
+  </tbody>
+</table>

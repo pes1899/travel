@@ -1,0 +1,28 @@
+<div *ngIf="project">
+  <h2>Project detail {{project.id}}</h2>
+  <form>
+    <div class="form-group">
+      <label for="code">Code</label>
+      <input type="text" [(ngModel)]="project.code" class="form-control" name="code" id="code">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" [(ngModel)]="project.name" class="form-control" name="name" id="name">
+    </div>
+
+    <div class="form-group">
+      <label for="validFrom">Valid from</label>
+      <input type="text" [(ngModel)]="project.validFrom" class="form-control" name="validFrom" id="validFrom">
+    </div>
+
+    <div class="form-group">
+      <label for="validTill">Valid to</label>
+      <input type="text" [(ngModel)]="project.validTill" class="form-control" name="validTill" id="validTill">
+    </div>
+
+    <button type="button" class="btn btn-secondary" (click)="goBack()">back</button>
+    <button type="button" class="btn btn-primary" (click)="save()">save</button>
+    <button type="button" class="btn btn-danger" (click)="delete()">delete</button>
+  </form>
+</div>
